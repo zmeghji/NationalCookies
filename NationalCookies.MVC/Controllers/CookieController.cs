@@ -11,7 +11,11 @@ namespace NationalCookies.Controllers
         {    
             _cookieService = cookieService;          
         }
-
+        public IActionResult ClearCache()
+        {
+            _cookieService.ClearCache();
+            return RedirectToAction("Index", "Home");
+        }
         public IActionResult Index()
         {
             return View(_cookieService.GetAllCookies());

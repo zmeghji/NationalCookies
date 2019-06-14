@@ -7,6 +7,7 @@ namespace NationalCookies.Data.Interfaces
 {
     public interface ICookieService
     {
+        void ClearCache();
         List<Cookie> GetAllCookies();
     }
 }
